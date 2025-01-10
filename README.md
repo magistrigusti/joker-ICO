@@ -63,8 +63,8 @@ We are using RemixID for deploying the contract and generation of the ABI in the
 ```
 
 ## Important Links
-
+https://github.com/magistrigusti/joker-ICO
 
 ## Authors
-
+M@gistriGusti
 

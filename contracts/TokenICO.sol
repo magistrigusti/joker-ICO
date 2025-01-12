@@ -84,7 +84,8 @@ contract TokenICO {
   }
 
   function transferEther(
-    address payable _receiver, uint256 _amount
+    address payable _receiver, 
+    uint256 _amount
     ) external payable {
     require(msg.value >= _amount, "Insufficient funds sent");
 

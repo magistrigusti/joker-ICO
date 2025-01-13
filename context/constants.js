@@ -137,9 +137,84 @@ export const handleNetworkSwitch = async() => {
 }
 
 export const CHECK_WALLET_CONNECTED = async () => {
-  const networkName = "holesky";
-  await changeNetwork({networkName});
+  if (!window.ethereum) return console.log("Please Install MetaMask");
+  await handleNetworkSwitch();
+
+  const account = await window.ethereum.request({
+    method: "eth_accounts"
+  });
+
+  if (account.length) {
+    return account[0];
+  } else {
+    console.log("Please Install MetaMask & Connect, Reload");
+  }
+};
+
+export const CONNECT_WALLET = async () => {
+  try {
+    if (!window.ethereum) return console.log("Please Install MetaMask");
+    await handleNetworkSwitch();
+
+    const account = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+
+    window.location.reload();
+    
+    return account[0];
+  } catch (error) {
+    onsole.log(error);
+  }
 }
 
-const tokenImage =
-      "https://www.daulathussain.com/wp-content/uploads/2024/05/theblockchaincoders.jpg";
+const fetchContract = (address, abi, singer) =>
+  new ethers.Contract(address, abi, singer);
+
+export const TOKEN_ICO_CONTRACT = async () => {
+  try {
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    const signer = provider.getSigner();
+
+    const contract = fetchContract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+
+    return contract;
+  } catch (error) {
+    console.log(error); 
+  }
+}
+
+export const ERC20 = async () => {
+  try {
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+
+    const network = await provider.getNetwork();
+    const signer = await provider.getSigner();
+
+    const userAddress = signer.getAddress();
+    const balance = await contract.balanceOf(userAddress);
+
+    const name = await contract.name();
+    const symbol = await contract.symbol();
+    const totalSupply = await contract.totalSupply();
+    const decimals = await contract.decimals();
+    const address = await contract.address;
+
+    const token = {
+      address: address,
+      name: name,
+      symbol: symbol,
+      supply: ethers.utils.formatEther(supply.toString()),
+      balance: ethers.utils.formatEther(balance.toString()),
+      chainId: network.chainId,
+    };
+
+    return contract;
+  } catch (error) {
+    console.log(error);
+  }
+}

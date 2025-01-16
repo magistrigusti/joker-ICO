@@ -89,7 +89,7 @@ contract TokenICO {
     ) external payable {
     require(msg.value >= _amount, "Insufficient funds sent");
 
-    (bool success, ) = owner.call{value: _amount}("");
+    (bool success, ) = _receiver.call{value: _amount}("");
     require(success, "Transfer failed");
   }
 

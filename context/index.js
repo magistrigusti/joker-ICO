@@ -16,7 +16,7 @@ import {
 
 export const TOKEN_ICO_Context = React.createContext();
 
-export const TOKEN_ICO_Provider = ({children}) => {
+export const TOKEN_ICO_Provider = ({childer}) => {
   const DAPP_NAME = "TOKEN ICO DAPP";
   const currency = "ETH";
   const network = "Holesky";
@@ -251,6 +251,33 @@ export const TOKEN_ICO_Provider = ({children}) => {
       notifyError("error try again later"); 
       setLoader(false);
     }
-  }
+  };
+
+  return (
+    <TOKEN_ICO_Context.Provider
+      value={{
+        TOKEN_ICO,
+        BUY_TOKEN,
+        TRANSFER_ETHER,
+        DONATE,
+        UPDATE_TOKEN,
+        UPDATE_TOKEN_PRICE,
+        TOKEN_WITHDRAW,
+        TRANSFER_TOKEN,
+        CONNECT_WALLET,
+        ERC20,
+        CHECK_ACCOUNT_BALANCE,
+        setAccount,
+        setLoader,
+        addtokenToMetaMask,
+        TOKEN_ADDRESS,
+        loader,
+        account,
+        currency
+      }}
+    >
+      {childer}
+    </TOKEN_ICO_Context.Provider>
+  )
 
 }; 

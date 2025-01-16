@@ -6,11 +6,11 @@
   import erc20 from "./ERC20.json";
 
   // // export const TEST_TOKEN_A = "0x78d03dFF0d3235C500bF990C7f8d5608561E4725";
-  // export const TEST_TOKEN_B = "0x4c78043046fEeD6F88E43E08c2e8022fFFC10E8f";
-  export const TOKEN_ADDRESS = "";
+  // export const TEST_TOKEN_B = "0x4c78043046fEeD6F88E43E08c2e8022fFFC10E8f"; 
+  export const TOKEN_ADDRESS = "0xb97c8de40808e1390cf776a7f60dd8a4c48965e2";
   export const ERC20_ABI = erc20.abi;
-  // export const OWNER_ADDRESS = "0xb309098bcB51E5C687a16FA41bD6055f47c9eBb0";
-  // export const CONTRACT_ADDRESS = "0x259e3eF787ABB17c96913B4B6f7Fb68494b83b64";
+  export const OWNER_ADDRESS = "0xe55feA9604a43D4CA3FB5Eef9254c670A2bb088c";
+  export const CONTRACT_ADDRESS = "0xe270808B33C3237d25Bc3e84eeA3bae3c5a99E80";
   export const CONTRACT_ABI = tokenICO.abi;
 
 const networks = {

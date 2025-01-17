@@ -271,7 +271,7 @@ export const addtokenToMetaMask = async () => {
     const tokenDecimals = tokenDetails?.decimals;
     const tokenAddress = TOKEN_ADDRESS;
     const tokenSymbol = tokenDetails?.symbol;
-    const tokenImage = "";
+    const tokenImage = "https://joker-swap-v1.netlify.app/assets/img/joker-logo.png";
 
     try {
       const wasAdded = await window.ethereum.request({

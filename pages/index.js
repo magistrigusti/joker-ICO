@@ -68,7 +68,7 @@ const index = () => {
 
   return (
     <>
-      
+      @MagistriGusti
       <div className="body-wrap">
         {ownerModel && (
           <Owner
@@ -154,7 +154,7 @@ const index = () => {
           currency={currency}
           ownerModel={ownerModel}
         />
-        @MagistriGusti
+
         <SideBar />
 
         <Hero setBuyModel={setBuyModel}
@@ -174,6 +174,7 @@ const index = () => {
         <Faq />
         <Contact />
         <Footer />
+        
       </div>
     </>
   );

@@ -172,7 +172,7 @@ const Footer = () => {
 
         <div className="icon icon--2">
           <div>
-            <img src="ssets/img/shape/f_icon2.png" alt="" />
+            <img src="assets/img/shape/f_icon2.png" alt="" />
           </div>
         </div>
       </div>

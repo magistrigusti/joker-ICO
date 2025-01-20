@@ -130,6 +130,12 @@ const Footer = () => {
                 <TiSocialGithub />
               </a>
             </li>
+
+            <li>
+              <a href="#">
+                <TiSocialLinkedin />
+              </a>
+            </li>
           </ul>
         </div>
       </div>

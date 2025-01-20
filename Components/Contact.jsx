@@ -63,7 +63,9 @@ const Contact = () => {
               <div data-parallax='{"y" : -50}'>
                 <img src="assets/img/shape/c_shape1.png" alt="" />
               </div>
+            </div>
 
+            <div className="shape shape--2">
               <div data-parallax='{"y" : 60}'>
                 <img src="assets/img/shape/c_shape2.png" alt="" />
               </div>

@@ -31,7 +31,6 @@ const TokenInfo = ({ detail, currency }) => {
               <ul className="token-info__list token-info--start">
                 <li>
                   <h4>Total Supply</h4>
-
                   <span>
                     {detail?.supply}
                     {detail?.symbol}
@@ -49,7 +48,6 @@ const TokenInfo = ({ detail, currency }) => {
 
                 <li>
                   <h4>Minimal Transaction</h4>
-
                   <span>10 Tokens / Transaction</span>
                 </li>
               </ul>
@@ -63,9 +61,32 @@ const TokenInfo = ({ detail, currency }) => {
                     { currency }
                   </span>
                 </li>
+
+                <li>
+                  <h4>Fund Raised</h4>
+                  <span>
+                    {Number(detail?.soldTokens) * Number(detail?.tokenPrice)}
+                    {currency}
+                  </span>
+                </li>
+
+                <li>
+                  <h4>Acceptable currencies</h4>
+                  <span>ETH, BTC, LTC</span>
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="token-info__shape">
+        <div className="shape shape--1">
+          <img src="assets/img/shape/ti_shape.png" alt="" />
+        </div>
+
+        <div className="shape shape--2">
+          <img src="assets/img/shape/ti_shape2.png" alt=""/>
         </div>
       </div>
     </section>

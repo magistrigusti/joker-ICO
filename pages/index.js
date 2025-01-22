@@ -69,7 +69,7 @@ const index = () => {
   return (
     <>
       @MagistriGusti
-      <div className="body-wrap">
+      <div className="body_wrap">
         {ownerModel && (
           <Owner
             setOwnerModel={setOwnerModel}
